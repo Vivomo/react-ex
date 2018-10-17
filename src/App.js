@@ -9,6 +9,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                <h1>关于React的一些知识点</h1>
                 <Router>
                     <div>
                         <ul>
@@ -17,9 +18,6 @@ class App extends Component {
                             </li>
                             <li>
                                 <Link to="/about">About</Link>
-                            </li>
-                            <li>
-                                <Link to="/topics">Topics</Link>
                             </li>
                         </ul>
 
