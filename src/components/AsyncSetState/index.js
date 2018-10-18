@@ -35,6 +35,16 @@ class AsyncSetState extends React.Component{
                 <button onClick={this.handleNormalClick}>普通点击更改setState num+1</button>
                 <br/>
                 <button onClick={this.handleSetTimeoutClick}>点击 setTimeout 后更改setState num+1</button>
+                <pre>
+                    ⎛⎝≥⏝⏝O⎠⎞⎛⎝≥⏝⏝O⎠⎞
+
+
+
+                    ⎛⎝^⏝⏝^⎠⎛⎝^⏝⏝^⎠⎞
+
+                    ⎛⎝Ͼ⏝⏝Ͽ⎠⎞⎛⎝Ͼ⏝⏝Ͽ⎠⎞
+
+                </pre>
             </div>
         )
     }
