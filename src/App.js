@@ -3,7 +3,8 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import './App.css';
 
 import Home from './components/Home';
-import About from './components/About'
+import About from './components/About';
+import AsyncSetState from './components/AsyncSetState';
 
 class App extends Component {
     render() {
@@ -17,6 +18,9 @@ class App extends Component {
                                 <Link to="/">Home</Link>
                             </li>
                             <li>
+                                <Link to="/async-set-state">setState执行的异步与否</Link>
+                            </li>
+                            <li>
                                 <Link to="/about">About</Link>
                             </li>
                         </ul>
@@ -24,6 +28,7 @@ class App extends Component {
                         <hr/>
 
                         <Route exact path="/" component={Home}/>
+                        <Route path="/async-set-state" component={AsyncSetState} />
                         <Route path="/about" component={About} />
                     </div>
                 </Router>
