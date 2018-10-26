@@ -4,6 +4,7 @@ import './App.css';
 
 import Home from './components/Home';
 import About from './components/About';
+import ContextTest from './components/ContextTest';
 import AsyncSetState from './components/AsyncSetState';
 
 class App extends Component {
@@ -21,6 +22,9 @@ class App extends Component {
                                 <Link to="/async-set-state">setState执行的异步与否</Link>
                             </li>
                             <li>
+                                <Link to="/context-test">React 16.3 context API 测试</Link>
+                            </li>
+                            <li>
                                 <Link to="/about">About</Link>
                             </li>
                         </ul>
@@ -29,6 +33,7 @@ class App extends Component {
 
                         <Route exact path="/" component={Home}/>
                         <Route path="/async-set-state" component={AsyncSetState} />
+                        <Route path="/context-test" component={ContextTest} />
                         <Route path="/about" component={About} />
                     </div>
                 </Router>
