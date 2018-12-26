@@ -6,6 +6,7 @@ import Home from './components/Home';
 import About from './components/About';
 import ContextTest from './components/ContextTest';
 import AsyncSetState from './components/AsyncSetState';
+import TestModal from './components/TestModal';
 
 class App extends Component {
     render() {
@@ -27,6 +28,9 @@ class App extends Component {
                             <li>
                                 <Link to="/about">About</Link>
                             </li>
+                            <li>
+                                <Link to="/testModal">TestModal</Link>
+                            </li>
                         </ul>
 
                         <hr/>
@@ -35,6 +39,7 @@ class App extends Component {
                         <Route path="/async-set-state" component={AsyncSetState} />
                         <Route path="/context-test" component={ContextTest} />
                         <Route path="/about" component={About} />
+                        <Route path="/testModal" component={TestModal} />
                     </div>
                 </Router>
             </div>
