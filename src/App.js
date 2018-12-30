@@ -9,6 +9,33 @@ import AsyncSetState from './components/AsyncSetState';
 import TestModal from './components/TestModal';
 
 class App extends Component {
+    state = {
+        catalog: [
+            {
+                path: '/',
+                name: 'Home',
+                component: Home
+            },
+            {
+                path: '/async-set-state',
+                name: 'setState执行的异步与否',
+                component: AsyncSetState
+            },{
+                path: '/context-test',
+                name: 'React 16.3 context API 测试',
+                component: ContextTest
+            },{
+                path: '/about',
+                name: 'About',
+                component: About
+            },{
+                path: '/testModal',
+                name: 'testModal',
+                component: TestModal
+            }
+        ]
+    };
+
     render() {
         return (
             <div className="App">
@@ -16,30 +43,20 @@ class App extends Component {
                 <Router>
                     <div>
                         <ul>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/async-set-state">setState执行的异步与否</Link>
-                            </li>
-                            <li>
-                                <Link to="/context-test">React 16.3 context API 测试</Link>
-                            </li>
-                            <li>
-                                <Link to="/about">About</Link>
-                            </li>
-                            <li>
-                                <Link to="/testModal">TestModal</Link>
-                            </li>
+                            {
+                                this.state.catalog.map(item => (
+                                    <li key={item.path}>
+                                        <Link to={item.path}>{item.name}</Link>
+                                    </li>
+                                ))
+                            }
                         </ul>
-
                         <hr/>
-
-                        <Route exact path="/" component={Home}/>
-                        <Route path="/async-set-state" component={AsyncSetState} />
-                        <Route path="/context-test" component={ContextTest} />
-                        <Route path="/about" component={About} />
-                        <Route path="/testModal" component={TestModal} />
+                        {
+                            this.state.catalog.map(item => (
+                                <Route key={item.path} path={item.path} component={item.component}/>
+                            ))
+                        }
                     </div>
                 </Router>
             </div>
