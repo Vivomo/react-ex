@@ -32,6 +32,10 @@ class App extends Component {
                 path: '/testModal',
                 name: 'testModal',
                 component: TestModal
+            },{
+                path: '/uploadFile',
+                name: 'uploadFile',
+                component: TestModal
             }
         ]
     };
