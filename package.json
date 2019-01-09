@@ -62,16 +62,11 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "precommit": "lint-staged"
+    "precommit": "eslint --ext .js --ext .jsx src"
   },
+  "pre-commit": ["precommit"],
   "eslintConfig": {
     "extends": "react-app"
-  },
-  "lint-staged": {
-    "src/**/*.js": [
-      "eslint --fix",
-      "git add"
-    ]
   },
   "browserslist": [
     ">0.2%",
