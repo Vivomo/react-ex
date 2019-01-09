@@ -3,7 +3,6 @@ import FileUpload from 'react-fileupload';
 
 let aaa = 1;
 let bbb = 1;
-let ccc = ddd;
 
 class UploadFile extends Component {
     options = {
@@ -26,6 +25,7 @@ class UploadFile extends Component {
         withCredentials: false,
         requestHeaders: {'User-Agent': 'So Aanyip'},
         chooseFile: function (files) {
+            console.log(123);
             console.log('you choose', typeof files === 'string' ? files : files[0].name);
         },
         beforeUpload: function (files, mill) {
