@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import FileUpload from 'react-fileupload';
 
-let aaa = 1
+let aaa = 1;
+let bbb = 1;
 
 
 class UploadFile extends Component {
@@ -18,37 +19,37 @@ class UploadFile extends Component {
         accept: 'image/*',
         chooseAndUpload: false,
         paramAddToField: {purpose: 'save'},
-        //fileFieldName : 'file',
+        // fileFieldName : 'file',
         fileFieldName(file) {
-            return file.name
+            return file.name;
         },
         withCredentials: false,
         requestHeaders: {'User-Agent': 'So Aanyip'},
         chooseFile: function (files) {
-            console.log('you choose', typeof files == 'string' ? files : files[0].name)
+            console.log('you choose', typeof files === 'string' ? files : files[0].name);
         },
         beforeUpload: function (files, mill) {
-            if (typeof files == 'string') return true
+            if (typeof files === 'string') return true;
             if (files[0].size < 1024 * 1024 * 20) {
-                files[0].mill = mill
-                return true
+                files[0].mill = mill;
+                return true;
             }
-            return false
+            return false;
         },
         doUpload: function (files, mill) {
-            console.log('you just uploaded', typeof files == 'string' ? files : files[0].name)
+            console.log('you just uploaded', typeof files === 'string' ? files : files[0].name);
         },
         uploading: function (progress) {
-            console.log('loading...', progress.loaded / progress.total + '%')
+            console.log('loading...', progress.loaded / progress.total + '%');
         },
         uploadSuccess: function (resp) {
-            console.log('upload success..!')
+            console.log('upload success..!');
         },
         uploadError: function (err) {
-            alert(err.message)
+            alert(err.message);
         },
         uploadFail: function (resp) {
-            alert(resp)
+            alert(resp);
         }
     };
 
