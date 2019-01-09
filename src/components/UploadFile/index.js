@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import FileUpload from 'react-fileupload';
 
+let a = 1;
 
 class UploadFile extends Component {
     options = {
@@ -22,9 +23,6 @@ class UploadFile extends Component {
         },
         withCredentials: false,
         requestHeaders: {'User-Agent': 'So Aanyip'},
-        beforeChoose: function () {
-            return user.isAllowUpload
-        },
         chooseFile: function (files) {
             console.log('you choose', typeof files == 'string' ? files : files[0].name)
         },
