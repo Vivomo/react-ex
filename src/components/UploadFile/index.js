@@ -3,6 +3,7 @@ import FileUpload from 'react-fileupload';
 
 let aaa = 1
 
+
 class UploadFile extends Component {
     options = {
         baseUrl: './upload',
