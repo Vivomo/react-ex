@@ -3,7 +3,7 @@ import FileUpload from 'react-fileupload';
 
 let aaa = 1;
 let bbb = 1;
-
+let ccc = ddd;
 
 class UploadFile extends Component {
     options = {
