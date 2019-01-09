@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import FileUpload from 'react-fileupload';
 
-let a = 1;
+let aa = 1;
 
 class UploadFile extends Component {
     options = {
