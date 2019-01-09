@@ -1,4 +1,21 @@
 {
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true,
+            "arrowFunctions": true,
+            "classes": true,
+            "modules": true,
+            "defaultParams": true
+        },
+        "sourceType": "module"
+    },
+    "parser": "babel-eslint",
+    "plugins": [
+        "react",
+        "jsx-a11y",
+        "import"
+    ],
     "rules": {
         "no-with": [ 2 ],
         "no-eval": [ 2 ],
@@ -9,9 +26,9 @@
         "no-extend-native": [ 2 ],
         "no-console": [ 1 ],
         "no-debugger": [ 1 ],
-        "indent": [ 1, 2, { "SwitchCase": 1 } ],
+        "indent": [ 1, 4, { "SwitchCase": 1 } ],
         "quotes": [ 1, "single" ],
-        "linebreak-style": [ 1, "unix" ],
+//        "linebreak-style": [ 1, "unix" ],
         "semi": [ 1, "always" ],
         "semi-spacing": [ 1 ],
         "one-var": [ 1, { "initialized": "never" } ],
