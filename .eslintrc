@@ -24,7 +24,6 @@
         "valid-typeof": [ 2 ],
         "no-caller": [ 2 ],
         "no-extend-native": [ 2 ],
-        "no-console": [ 1 ],
         "no-debugger": [ 1 ],
         "indent": [ 1, 4, { "SwitchCase": 1 } ],
         "quotes": [ 1, "single" ],
@@ -63,5 +62,5 @@
         "es6": true,
         "browser": true
     },
-    "extends": "eslint:recommended"
+    "extends": "react-app"
 }
