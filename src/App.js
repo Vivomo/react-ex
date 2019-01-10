@@ -7,8 +7,9 @@ import About from './components/About';
 import ContextTest from './components/ContextTest';
 import AsyncSetState from './components/AsyncSetState';
 import TestModal from './components/TestModal';
+import TestForceUpdate from './components/TestForceUpdate';
 
-console.log(1);
+
 class App extends Component {
     state = {
         catalog: [
@@ -37,6 +38,10 @@ class App extends Component {
                 path: '/uploadFile',
                 name: 'uploadFile',
                 component: TestModal
+            }, {
+                path: '/testForceUpdate',
+                name: 'testForceUpdate',
+                component: TestForceUpdate
             }
         ]
     };
