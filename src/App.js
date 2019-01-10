@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import './App.css';
 
 import Home from './components/Home';
@@ -8,6 +8,7 @@ import ContextTest from './components/ContextTest';
 import AsyncSetState from './components/AsyncSetState';
 import TestModal from './components/TestModal';
 
+console.log(1);
 class App extends Component {
     state = {
         catalog: [
@@ -20,19 +21,19 @@ class App extends Component {
                 path: '/async-set-state',
                 name: 'setState执行的异步与否',
                 component: AsyncSetState
-            },{
+            }, {
                 path: '/context-test',
                 name: 'React 16.3 context API 测试',
                 component: ContextTest
-            },{
+            }, {
                 path: '/about',
                 name: 'About',
                 component: About
-            },{
+            }, {
                 path: '/testModal',
                 name: 'testModal',
                 component: TestModal
-            },{
+            }, {
                 path: '/uploadFile',
                 name: 'uploadFile',
                 component: TestModal
