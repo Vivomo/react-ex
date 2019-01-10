@@ -1,13 +1,51 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import './App.css';
 
 import Home from './components/Home';
 import About from './components/About';
 import ContextTest from './components/ContextTest';
 import AsyncSetState from './components/AsyncSetState';
+import TestModal from './components/TestModal';
+import TestForceUpdate from './components/TestForceUpdate';
+
 
 class App extends Component {
+    state = {
+        catalog: [
+            {
+                path: '/',
+                name: 'Home',
+                component: Home
+            },
+            {
+                path: '/async-set-state',
+                name: 'setState执行的异步与否',
+                component: AsyncSetState
+            }, {
+                path: '/context-test',
+                name: 'React 16.3 context API 测试',
+                component: ContextTest
+            }, {
+                path: '/about',
+                name: 'About',
+                component: About
+            }, {
+                path: '/testModal',
+                name: 'testModal',
+                component: TestModal
+            }, {
+                path: '/uploadFile',
+                name: 'uploadFile',
+                component: TestModal
+            }, {
+                path: '/testForceUpdate',
+                name: 'testForceUpdate',
+                component: TestForceUpdate
+            }
+        ]
+    };
+
     render() {
         return (
             <div className="App">
@@ -15,26 +53,20 @@ class App extends Component {
                 <Router>
                     <div>
                         <ul>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/async-set-state">setState执行的异步与否</Link>
-                            </li>
-                            <li>
-                                <Link to="/context-test">React 16.3 context API 测试</Link>
-                            </li>
-                            <li>
-                                <Link to="/about">About</Link>
-                            </li>
+                            {
+                                this.state.catalog.map(item => (
+                                    <li key={item.path}>
+                                        <Link to={item.path}>{item.name}</Link>
+                                    </li>
+                                ))
+                            }
                         </ul>
-
                         <hr/>
-
-                        <Route exact path="/" component={Home}/>
-                        <Route path="/async-set-state" component={AsyncSetState} />
-                        <Route path="/context-test" component={ContextTest} />
-                        <Route path="/about" component={About} />
+                        {
+                            this.state.catalog.map(item => (
+                                <Route key={item.path} path={item.path} component={item.component}/>
+                            ))
+                        }
                     </div>
                 </Router>
             </div>
