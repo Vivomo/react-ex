@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {ThemeContext, themes} from '../../context/theme';
 import TButton from './theme-button';
 
@@ -15,14 +15,14 @@ class ContextTest extends React.Component{
         super(props);
         this.state = {
             theme: themes.light
-        }
+        };
     }
 
     toggleTheme = () => {
         this.setState(state => ({
             theme: state.theme === themes.dark ?
                 themes.light :
-                themes.dark,
+                themes.dark
         }));
     };
 
@@ -35,8 +35,8 @@ class ContextTest extends React.Component{
                 </ThemeContext.Provider>
 
             </div>
-        )
+        );
     }
-};
+}
 
 export default ContextTest;
