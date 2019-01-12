@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { Provider } from 'react-redux';
 
 const ReduxTest = () => {
@@ -6,7 +6,7 @@ const ReduxTest = () => {
         <>
             <div>ReduxTest</div>
         </>
-    )
+    );
 };
 
 export default ReduxTest;

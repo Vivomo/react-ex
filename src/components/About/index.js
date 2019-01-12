@@ -1,5 +1,5 @@
-import React from "react";
-import './about.scss'
+import React from 'react';
+import './about.scss';
 
 const About = () => {
     return (
@@ -7,7 +7,7 @@ const About = () => {
             <div>About</div>
             <p class="red">red</p>
         </>
-    )
+    );
 };
 
 export default About;

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Modal} from 'antd';
-import 'antd/lib/modal/style/css'
+import 'antd/lib/modal/style/css';
 
 class TestModal extends Component {
     state = {
@@ -9,13 +9,13 @@ class TestModal extends Component {
 
     handleCancel = (e) => {
         this.setState({
-            visible: false,
+            visible: false
         });
     };
 
     show = () => {
         this.setState({
-            visible: true,
+            visible: true
         });
     };
 
@@ -29,7 +29,7 @@ class TestModal extends Component {
                     visible={this.state.visible}
                     onOk={this.handleOk}
                     onCancel={this.handleCancel}
-                 >
+                >
                     <p>Some contents...</p>
                     <p>Some contents...</p>
                     <p>Some contents...</p>

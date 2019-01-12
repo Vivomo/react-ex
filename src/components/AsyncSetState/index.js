@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 class AsyncSetState extends React.Component{
     constructor(props) {
@@ -46,7 +46,7 @@ class AsyncSetState extends React.Component{
 
                 </pre>
             </div>
-        )
+        );
     }
 }
 

@@ -2,13 +2,13 @@ import React from 'react';
 import {ThemeContext, themes} from '../../context/theme';
 import TButton from './theme-button';
 
-function Toolbar(props) {
+const Toolbar = (props) => {
     return (
         <TButton onClick={props.changeTheme}>
             Change Theme
         </TButton>
     );
-}
+};
 
 class ContextTest extends React.Component{
     constructor(props) {
