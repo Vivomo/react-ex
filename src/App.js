@@ -17,6 +17,7 @@ class App extends Component {
             {
                 path: '/',
                 name: 'Home',
+                exact: true,
                 component: Home
             },
             {
@@ -69,7 +70,7 @@ class App extends Component {
                         <hr/>
                         {
                             this.state.catalog.map(item => (
-                                <Route key={item.path} path={item.path} component={item.component}/>
+                                <Route key={item.path} path={item.path} exact={item.exact} component={item.component}/>
                             ))
                         }
                     </div>
