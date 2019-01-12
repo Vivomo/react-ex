@@ -8,6 +8,7 @@ import ContextTest from './components/ContextTest';
 import AsyncSetState from './components/AsyncSetState';
 import TestModal from './components/TestModal';
 import TestForceUpdate from './components/TestForceUpdate';
+import SetState from './components/SetState';
 
 
 class App extends Component {
@@ -42,6 +43,10 @@ class App extends Component {
                 path: '/testForceUpdate',
                 name: 'testForceUpdate',
                 component: TestForceUpdate
+            }, {
+                path: '/setState',
+                name: 'setState',
+                component: SetState
             }
         ]
     };
