@@ -8,6 +8,7 @@ class SetState extends Component {
     };
 
     render() {
+        console.log('render');
         return (
             <div>
                 <ul>
@@ -17,6 +18,10 @@ class SetState extends Component {
                 <button onClick={() => this.setState({num: this.state.num + 1})}>setState add num</button>
                 <button onClick={() => this.num++}>this.num++</button>
                 <button onClick={() => this.setState({})}>setEmptyState</button>
+                <button onClick={() => {
+                    this.setState({});
+                    this.setState({});
+                }}>setEmptyState twice</button>
             </div>
         );
     }
