@@ -17,7 +17,8 @@ class SetState extends Component {
                 </ul>
                 <button onClick={() => this.setState({num: this.state.num + 1})}>setState add num</button>
                 <button onClick={() => this.num++}>this.num++</button>
-                <button onClick={() => this.setState({})}>setEmptyState</button>
+                <button onClick={() => this.setState({})}>setState {}</button>
+                <button onClick={() => this.setState()}>setState no args</button>
                 <button onClick={() => {
                     this.setState({});
                     this.setState({});
