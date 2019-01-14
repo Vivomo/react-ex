@@ -9,6 +9,7 @@ import AsyncSetState from './components/AsyncSetState';
 import TestModal from './components/TestModal';
 import TestForceUpdate from './components/TestForceUpdate';
 import SetState from './components/SetState';
+import ReduxTest from './components/ReduxTest';
 
 
 class App extends Component {
@@ -48,6 +49,10 @@ class App extends Component {
                 path: '/setState',
                 name: 'setState',
                 component: SetState
+            }, {
+                path: '/reduxTest',
+                name: 'reduxTest',
+                component: ReduxTest
             }
         ]
     };
