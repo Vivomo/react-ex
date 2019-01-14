@@ -1,5 +1,10 @@
 import React, {Component} from 'react';
 
+const TestProps = ({count}) => {
+    console.log('test props render');
+    return <button>count btn:{count}</button>;
+};
+
 class SetState extends Component {
 
     num = 1;
@@ -14,6 +19,7 @@ class SetState extends Component {
                 <ul>
                     <li>state.num: {this.state.num}</li>
                     <li>this.num: {this.num}</li>
+                    <li><TestProps count={this.state.num}/></li>
                 </ul>
                 <button onClick={() => this.setState({num: this.state.num + 1})}>setState add num</button>
                 <button onClick={() => this.num++}>this.num++</button>
