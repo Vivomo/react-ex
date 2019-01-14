@@ -5,9 +5,9 @@ const defaultState = {
 };
 
 export default handleActions({
-    setGlobalCount: (state, {payload}) => ({
+    SET_GLOBAL_COUNT: (state, {payload}) => ({
         ...state,
-        globalCount: payload.globalCount
+        globalCount: payload.value
     })
 }, defaultState);
 
