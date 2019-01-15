@@ -6,12 +6,17 @@ import {setCount} from '../../store/action';
 import {bindActionCreators} from 'redux';
 
 class Counter extends Component {
+    state = {
+        unusedNum: 1
+    };
+
     render() {
         console.log(this.context);
         return (
             <div>
                 <div>{this.props.count}</div>
                 <button onClick={() => this.props.setCount(this.props.count + 1)}>count++</button>
+                <button onClick={() => this.setState({})}>setState</button>
             </div>
         );
     }
