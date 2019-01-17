@@ -7,7 +7,9 @@ import {bindActionCreators} from 'redux';
 import store from '../../store';
 
 class Counter extends Component {
-
+    state = {
+        unusedNum: 1
+    };
     render() {
         console.log(this.context);
         return (
@@ -22,6 +24,7 @@ class Counter extends Component {
                         }
                     });
                 }}>store dispatch</button>
+                <button onClick={() => this.setState({})}>setState</button>
             </div>
         );
     }

@@ -8,6 +8,9 @@ class CounterWrap extends Component {
     render() {
         return (
             <div>
+                {
+                    console.log('counterWrap render')
+                }
                 {this.props.children}
             </div>
         );
