@@ -10,6 +10,7 @@ import TestModal from './components/TestModal';
 import TestForceUpdate from './components/TestForceUpdate';
 import SetState from './components/SetState';
 import ReduxTest from './components/ReduxTest';
+import HookTest from './components/HookTest';
 
 
 class App extends Component {
@@ -53,6 +54,10 @@ class App extends Component {
                 path: '/reduxTest',
                 name: 'reduxTest',
                 component: ReduxTest
+            }, {
+                path: '/hookTest',
+                name: 'hookTest',
+                component: HookTest
             }
         ]
     };
