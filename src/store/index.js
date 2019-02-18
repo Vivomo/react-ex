@@ -8,6 +8,4 @@ import {
 
 import reducer from './reducer';
 
-export default createStore(reducer, compose(
-    applyMiddleware(thunk)
-));
+export default createStore(reducer, compose(applyMiddleware(thunk)));

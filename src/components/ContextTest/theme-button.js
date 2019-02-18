@@ -6,16 +6,15 @@ class TButton extends React.Component {
         let props = this.props;
         return (
             <ThemeContext.Consumer>
-                {theme => (
-                    <button
-                        {...props}
-                        style={{
-                            backgroundColor: theme.background,
-                            color: theme.foreground
-                        }}
-                    />
+                {theme => <button
+                    {...props}
+                    style={{
+                        backgroundColor: theme.background,
+                        color: theme.foreground
+                    }}
+                />
 
-                )}
+                }
             </ThemeContext.Consumer>
         );
     }

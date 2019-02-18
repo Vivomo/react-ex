@@ -70,18 +70,14 @@ class App extends Component {
                     <div>
                         <ul>
                             {
-                                this.state.catalog.map(item => (
-                                    <li key={item.path}>
-                                        <Link to={item.path}>{item.name}</Link>
-                                    </li>
-                                ))
+                                this.state.catalog.map(item => <li key={item.path}>
+                                    <Link to={item.path}>{item.name}</Link>
+                                </li>)
                             }
                         </ul>
                         <hr/>
                         {
-                            this.state.catalog.map(item => (
-                                <Route key={item.path} path={item.path} exact={item.exact} component={item.component}/>
-                            ))
+                            this.state.catalog.map(item => <Route key={item.path} path={item.path} exact={item.exact} component={item.component}/>)
                         }
                     </div>
                 </Router>
