@@ -28,7 +28,7 @@ class PortalsDialog extends PureComponent {
                 <div className="confirm-wrap">
                     <h5 className="title">
                         <span>{title}</span>
-                        <span className="close iconfont" onClick={onCancel}>󰅕</span>
+                        <span className="close" onClick={onCancel}>×</span>
                     </h5>
                     <div className="content">
                         {this.props.children}
