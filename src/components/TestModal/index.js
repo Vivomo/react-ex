@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import { Modal} from 'antd';
+import PortalsDialog from '../PortalsDialog';
 import 'antd/lib/modal/style/css';
 
 class TestModal extends Component {
     state = {
-        visible: false
+        visible: false,
+        portalsVisible: false
     };
 
     handleCancel = (e) => {
@@ -24,6 +26,11 @@ class TestModal extends Component {
         return (
             <div>
                 <button onClick={this.show}>show</button>
+                <button onClick={() => this.setState({portalsVisible: true})}>portals</button>
+                <PortalsDialog
+                    visible={this.state.portalsVisible}
+                    onCancel={() => this.setState({portalsVisible: false})}
+                />
                 <Modal
                     title="Basic Modal"
                     visible={this.state.visible}
