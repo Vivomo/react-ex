@@ -12,6 +12,13 @@ class SetState extends Component {
         num: 1
     };
 
+    static getDerivedStateFromProps(props, state) {
+        console.log(props, state);
+        return {
+            num: 5
+        };
+    }
+
     render() {
         console.log('render');
         return (
