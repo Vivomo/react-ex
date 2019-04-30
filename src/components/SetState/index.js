@@ -36,6 +36,9 @@ class SetState extends Component {
                     this.setState({});
                     this.setState({});
                 }}>setEmptyState twice</button>
+                <button disabled={true} onClick={() => {
+                    this.setState({});
+                }}>disabled</button>
             </div>
         );
     }
