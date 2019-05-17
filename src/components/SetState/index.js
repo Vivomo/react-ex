@@ -9,7 +9,8 @@ class SetState extends Component {
 
     num = 1;
     state = {
-        num: 1
+        num: 1,
+        arr: [1]
     };
 
     static getDerivedStateFromProps(props, state) {
@@ -28,17 +29,30 @@ class SetState extends Component {
                     <li>this.num: {this.num}</li>
                     <li><TestProps count={this.state.num}/></li>
                 </ul>
-                <button onClick={() => this.setState({num: this.state.num + 1})}>setState add num</button>
-                <button onClick={() => this.num++}>this.num++</button>
-                <button onClick={() => this.setState({})}>setState {}</button>
-                <button onClick={() => this.setState()}>setState no args</button>
-                <button onClick={() => {
-                    this.setState({});
-                    this.setState({});
-                }}>setEmptyState twice</button>
-                <button disabled={true} onClick={() => {
-                    this.setState({});
-                }}>disabled</button>
+                <div>
+                    <button onClick={() => this.setState({num: this.state.num + 1})}>setState add num</button>
+                    <button onClick={() => this.num++}>this.num++</button>
+                    <button onClick={() => this.setState({})}>setState {}</button>
+                    <button onClick={() => this.setState()}>setState no args</button>
+                    <button onClick={() => {
+                        this.setState({});
+                        this.setState({});
+                    }}>setEmptyState twice</button>
+                    <button disabled={true} onClick={() => {
+                        this.setState({});
+                    }}>disabled</button>
+                </div>
+                <div>
+                    arr{this.state.arr.join('-')}
+                    <br/>
+                    <button
+                        onClick={() => {
+                            let arr = this.state.arr;
+                            arr.push(arr.length + 1);
+                            this.setState({arr});
+                        }}
+                    >set arr</button>
+                </div>
             </div>
         );
     }
