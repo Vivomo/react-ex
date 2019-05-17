@@ -11,6 +11,7 @@ import TestForceUpdate from './components/TestForceUpdate';
 import SetState from './components/SetState';
 import ReduxTest from './components/ReduxTest';
 import HookTest from './components/HookTest';
+import TestPure from './components/TestPure';
 
 
 class App extends Component {
@@ -50,6 +51,10 @@ class App extends Component {
                 path: '/setState',
                 name: 'setState',
                 component: SetState
+            }, {
+                path: '/testPure',
+                name: '测试 PureComponent',
+                component: TestPure
             }, {
                 path: '/reduxTest',
                 name: 'reduxTest',
