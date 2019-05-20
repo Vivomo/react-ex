@@ -12,6 +12,7 @@ import SetState from './components/SetState';
 import ReduxTest from './components/ReduxTest';
 import HookTest from './components/HookTest';
 import TestPure from './components/TestPure';
+import RenderProps from './components/RenderProps';
 
 
 class App extends Component {
@@ -63,6 +64,10 @@ class App extends Component {
                 path: '/hookTest',
                 name: 'hookTest',
                 component: HookTest
+            }, {
+                path: '/renderProps',
+                name: 'test renderProps',
+                component: RenderProps
             }
         ]
     };
@@ -70,7 +75,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <h1>关于React的一些知识点</h1>
+                <h1>React 特性测试</h1>
                 <Router>
                     <div>
                         <ul>
