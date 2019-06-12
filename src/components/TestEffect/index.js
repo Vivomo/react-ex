@@ -11,6 +11,7 @@ const TestEffect = () => {
 
     return (
         <div>
+            <span>num: {num}</span>
             <button onClick={() => setNum(num + 1)}>add</button>
             <button onClick={delayLog}>log</button>
         </div>
