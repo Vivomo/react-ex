@@ -1,8 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 
 const TestEffect = () => {
     let [num, setNum] = useState(0);
     let [obj, setObj] = useState({num: 0});
+
+    let fleshNum = useRef(num);
 
     let delayLog = () => {
         setTimeout(() => {
@@ -15,6 +17,14 @@ const TestEffect = () => {
             console.log(JSON.stringify(obj), obj);
         }, 3000);
     };
+
+    useEffect(() => {
+        fleshNum.current = num;
+        setTimeout(() => {
+            console.log(num, 'num in setTimeout');
+            console.log(fleshNum.current, 'flesh num');
+        }, 3000);
+    });
 
     return (
         <div>
