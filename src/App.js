@@ -13,6 +13,7 @@ import ReduxTest from './components/ReduxTest';
 import HookTest from './components/HookTest';
 import TestPure from './components/TestPure';
 import RenderProps from './components/RenderProps';
+import TestEffect from './components/TestEffect';
 
 
 class App extends Component {
@@ -68,6 +69,10 @@ class App extends Component {
                 path: '/renderProps',
                 name: 'test renderProps',
                 component: RenderProps
+            }, {
+                path: '/testEffect',
+                name: 'TestEffect',
+                component: TestEffect
             }
         ]
     };
