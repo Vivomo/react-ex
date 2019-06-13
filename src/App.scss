@@ -1,0 +1,15 @@
+.wrap {
+    display: flex;
+    height: 100vh;
+
+    .c-menu {
+        width: 240px;
+        border-right: 1px solid;
+        list-style-type: upper-roman;
+    }
+
+    .c-page {
+        padding: 20px;
+        flex: 1;
+    }
+}

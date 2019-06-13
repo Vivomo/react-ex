@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
-import './App.css';
+import './App.scss';
 
 import Home from './components/Home';
 import About from './components/About';
@@ -80,22 +80,24 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <h1>React 特性测试</h1>
-                <Router>
-                    <div>
-                        <ul>
-                            {
-                                this.state.catalog.map(item => <li key={item.path}>
-                                    <Link to={item.path}>{item.name}</Link>
-                                </li>)
-                            }
-                        </ul>
-                        <hr/>
-                        {
-                            this.state.catalog.map(item => <Route key={item.path} path={item.path} exact={item.exact} component={item.component}/>)
-                        }
-                    </div>
-                </Router>
+                <div className="wrap">
+                    <Router>
+                        <>
+                            <ol className="c-menu">
+                                {
+                                    this.state.catalog.map(item => <li key={item.path}>
+                                        <Link to={item.path}>{item.name}</Link>
+                                    </li>)
+                                }
+                            </ol>
+                            <div className="c-page">
+                                {
+                                    this.state.catalog.map(item => <Route key={item.path} path={item.path} exact={item.exact} component={item.component}/>)
+                                }
+                            </div>
+                        </>
+                    </Router>
+                </div>
             </div>
         );
     }
