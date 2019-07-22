@@ -17,6 +17,7 @@ const SyncUpdate = () => {
             </span>
             <br/>
             <Input2/>
+            <BlurTime/>
         </div>
     );
 };
@@ -92,5 +93,27 @@ class Input2 extends React.Component {
         );
     }
 }
+
+const BlurTime = () => {
+    let input = useRef(null);
+    let btn = useRef(null);
+
+    useEffect(() => {
+        input.current.addEventListener('blur', () => {
+            console.time('blur');
+        });
+
+        btn.current.addEventListener('click', () => {
+            console.timeEnd('blur');
+        });
+    }, []);
+    return (
+        <div>
+            <input type="text" ref={input}/>
+            <button ref={btn}>btn</button>
+        </div>
+
+    );
+};
 
 export default SyncUpdate;
