@@ -14,6 +14,7 @@ import HookTest from './components/HookTest';
 import TestPure from './components/TestPure';
 import RenderProps from './components/RenderProps';
 import TestEffect from './components/TestEffect';
+import SyncUpdate from './components/SyncUpdate';
 
 
 class App extends Component {
@@ -73,6 +74,10 @@ class App extends Component {
                 path: '/testEffect',
                 name: 'TestEffect',
                 component: TestEffect
+            }, {
+                path: '/syncUpdate',
+                name: '同步更新',
+                component: SyncUpdate
             }
         ]
     };
