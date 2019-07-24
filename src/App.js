@@ -15,6 +15,7 @@ import TestPure from './components/TestPure';
 import RenderProps from './components/RenderProps';
 import TestEffect from './components/TestEffect';
 import SyncUpdate from './components/SyncUpdate';
+import TestLifeCircle from './components/TestLifeCircle';
 
 
 class App extends Component {
@@ -78,6 +79,10 @@ class App extends Component {
                 path: '/syncUpdate',
                 name: '同步更新',
                 component: SyncUpdate
+            }, {
+                path: '/testLifeCircle',
+                name: '生命周期测试',
+                component: TestLifeCircle
             }
         ]
     };
