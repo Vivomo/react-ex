@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Modal} from 'antd';
-import PortalsDialog from '../PortalsDialog';
+import PortalsDialog from '../portals-dialog';
 import 'antd/lib/modal/style/css';
 
 class TestModal extends Component {

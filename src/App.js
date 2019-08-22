@@ -2,20 +2,20 @@ import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import './App.scss';
 
-import Home from './components/Home';
-import About from './components/About';
-import ContextTest from './components/ContextTest';
-import AsyncSetState from './components/AsyncSetState';
-import TestModal from './components/TestModal';
-import TestForceUpdate from './components/TestForceUpdate';
-import SetState from './components/SetState';
-import ReduxTest from './components/ReduxTest';
-import HookTest from './components/HookTest';
-import TestPure from './components/TestPure';
-import RenderProps from './components/RenderProps';
-import TestEffect from './components/TestEffect';
-import SyncUpdate from './components/SyncUpdate';
-import TestLifeCircle from './components/TestLifeCircle';
+import Home from './components/home';
+import About from './components/about';
+import ContextTest from './components/context-test';
+import AsyncSetState from './components/async-set-state';
+import TestModal from './components/test-modal';
+import TestForceUpdate from './components/test-force-update';
+import SetState from './components/set-state';
+import ReduxTest from './components/redux-test';
+import HookTest from './components/hook-test';
+import TestPure from './components/test-pure';
+import RenderProps from './components/render-props';
+import TestEffect from './components/test-effect';
+import SyncUpdate from './components/sync-update';
+import TestLifeCircle from './components/test-lifecircle';
 
 
 class App extends Component {
