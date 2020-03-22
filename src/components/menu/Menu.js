@@ -8,10 +8,10 @@ const Menu = ({data}) => {
                 data.map((item, i) => {
                     if (item.routes) {
                         return (
-                            <>
+                            <React.Fragment key={i}>
                                 <li key={i}>{item.name}</li>
                                 <Menu data={item.routes}/>
-                            </>
+                            </React.Fragment>
                         );
                     }
                     return <li key={i}><Link to={item.path}>{item.name}</Link></li>;
