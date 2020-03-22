@@ -1,14 +1,24 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {useState} from 'react';
 
-const HookTest = () => {
-    const [count, setCount] = useState(0);
+let test = () => {
+    let [num, setNum] = useState(0);
+    setNum(num + 1);
+    console.log(num);
+};
+
+const HooksTest = () => {
+    let [num, setNum] = useState(0);
 
     return (
         <div>
-            <p>{count}</p>
-            <button onClick={() => setCount(count + 1)}>Click</button>
+            <button onClick={() => {
+                test();
+                setNum(num + 1);
+            }}>Number ++</button>
+            {num}
         </div>
     );
 };
 
-export default HookTest;
+export default HooksTest;
