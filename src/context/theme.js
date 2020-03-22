@@ -11,8 +11,5 @@ export const themes = {
     }
 };
 
-export const ThemeContext = React.createContext(
-    themes.dark // default value
-);
+export const ThemeContext = React.createContext(themes.dark);
 
-console.log(ThemeContext);

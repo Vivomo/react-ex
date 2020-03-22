@@ -3,7 +3,6 @@ import { Provider } from 'react-redux';
 import store from '../../store';
 import Counter from './counter';
 import CounterWap from './counterWrap';
-console.log(store.getState());
 
 const ReduxTest = () => {
     return (

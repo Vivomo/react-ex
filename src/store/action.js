@@ -1,3 +1,3 @@
-import { createAction } from 'redux-actions';
+import {createAction} from 'redux-actions';
 
-export const setCount = (value) => dispatch => dispatch(createAction('SET_GLOBAL_COUNT')({ value }));
+export const setCount = (value) => dispatch => dispatch(createAction('SET_GLOBAL_COUNT')({value}));

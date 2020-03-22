@@ -38,8 +38,6 @@ class AsyncSetState extends React.Component{
                 <pre>
                     ⎛⎝≥⏝⏝O⎠⎞⎛⎝≥⏝⏝O⎠⎞
 
-
-
                     ⎛⎝^⏝⏝^⎠⎛⎝^⏝⏝^⎠⎞
 
                     ⎛⎝Ͼ⏝⏝Ͽ⎠⎞⎛⎝Ͼ⏝⏝Ͽ⎠⎞
