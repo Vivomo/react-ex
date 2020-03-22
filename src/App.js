@@ -3,13 +3,11 @@ import {BrowserRouter as Router, Switch} from 'react-router-dom';
 import './App.scss';
 
 import Menu from './components/menu/Menu';
-
 import routerConfig from './router/config';
 import RenderRouter from './router/RenderRouter';
 
 
 let App = () => {
-    console.log(RenderRouter(routerConfig));
     return (
         <div className="App">
             <div className="wrap">
@@ -24,9 +22,6 @@ let App = () => {
                                     })
                                 }
                             </Switch>
-                            {/*{*/}
-                            {/*    renderRouter(routerConfig)*/}
-                            {/*}*/}
                         </div>
                     </>
                 </Router>
