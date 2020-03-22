@@ -5,11 +5,16 @@ const Menu = ({data}) => {
     return (
         <ol className="c-menu">
             {
-                data.map(item => {
-                    if (item.subs) {
-                        return <Menu data={item.subs}/>;
+                data.map((item, i) => {
+                    if (item.routes) {
+                        return (
+                            <>
+                                <li key={i}>{item.name}</li>
+                                <Menu data={item.routes}/>
+                            </>
+                        );
                     }
-                    return <li key={item.path}><Link to={item.path}>{item.name}</Link></li>;
+                    return <li key={i}><Link to={item.path}>{item.name}</Link></li>;
                 })
             }
         </ol>

@@ -1,10 +1,12 @@
 import React from 'react';
+import RenderRouter from '../../router/RenderRouter';
+import Switch from 'react-router/Switch';
 
-const TestList = () => {
+const TestList = ({routes}) => {
     return (
-        <div>
-            列表
-        </div>
+        <Switch>
+            {routes.map((route, i) => <RenderRouter key={i} {...route} />)}
+        </Switch>
     );
 };
 

@@ -149,7 +149,6 @@
         "indent": 2,
         "key-spacing": 2,
         "keyword-spacing": 2,
-        "new-cap": 2,
         "no-array-constructor": 1,
         "no-mixed-spaces-and-tabs": 2,
         "no-multiple-empty-lines": 2,

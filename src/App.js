@@ -1,14 +1,15 @@
 import React from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {BrowserRouter as Router, Switch} from 'react-router-dom';
 import './App.scss';
 
 import Menu from './components/menu/Menu';
 
 import routerConfig from './router/config';
-import renderRouter from './router/renderRouter';
+import RenderRouter from './router/RenderRouter';
 
 
 let App = () => {
+    console.log(RenderRouter(routerConfig));
     return (
         <div className="App">
             <div className="wrap">
@@ -16,9 +17,16 @@ let App = () => {
                     <>
                         <Menu data={routerConfig}/>
                         <div className="c-page">
-                            {
-                                renderRouter(routerConfig)
-                            }
+                            <Switch>
+                                {
+                                    routerConfig.map((route, i) => {
+                                        return <RenderRouter key={i} {...route}/>;
+                                    })
+                                }
+                            </Switch>
+                            {/*{*/}
+                            {/*    renderRouter(routerConfig)*/}
+                            {/*}*/}
                         </div>
                     </>
                 </Router>

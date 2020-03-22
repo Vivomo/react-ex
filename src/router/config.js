@@ -12,6 +12,9 @@ import RenderProps from '../components/render-props';
 import TestEffect from '../components/test-effect';
 import SyncUpdate from '../components/sync-update';
 import TestLifeCircle from '../components/test-lifecircle';
+import TestList from '../components/test-list/TestList';
+import List1 from '../components/test-list/List1';
+import List2 from '../components/test-list/List2';
 
 let config = [
     {
@@ -76,6 +79,22 @@ let config = [
         path: '/testLifeCircle',
         name: '生命周期测试',
         component: TestLifeCircle
+    }, {
+        path: '/testList',
+        name: '测试列表',
+        component: TestList,
+        routes: [
+            {
+                path: '/testList/list1',
+                name: '列表1',
+                component: List1
+            },
+            {
+                path: '/testList/list2',
+                name: '列表2',
+                component: List2
+            }
+        ]
     }
 ];
 
