@@ -2,4 +2,3 @@ config/
 scripts/
 public/
 build/
-package-lock.json
