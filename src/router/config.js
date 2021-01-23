@@ -15,6 +15,7 @@ import TestLifeCircle from '../components/test-lifecircle';
 import TestList from '../components/test-list/TestList';
 import List1 from '../components/test-list/List1';
 import List2 from '../components/test-list/List2';
+import TestMemo from '../components/test-memo';
 
 let config = [
     {
@@ -79,6 +80,10 @@ let config = [
         path: '/testLifeCircle',
         name: '生命周期测试',
         component: TestLifeCircle
+    }, {
+        path: '/testMemo',
+        name: 'memo 测试',
+        component: TestMemo
     }, {
         path: '/testList',
         name: '测试列表',

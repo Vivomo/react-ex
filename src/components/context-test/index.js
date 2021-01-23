@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {ThemeContext, themes} from '../../context/theme';
 import TButton from './theme-button';
 
@@ -8,6 +8,12 @@ const Toolbar = (props) => {
             Change Theme
         </TButton>
     );
+};
+
+const BtnUseCtx = () => {
+    let theme = useContext(ThemeContext);
+    console.log(theme);
+    return <button >按钮</button>;
 };
 
 class ContextTest extends React.Component{
@@ -32,8 +38,9 @@ class ContextTest extends React.Component{
                 <h2>React 16.3 新增的 Context API 测试</h2>
                 <ThemeContext.Provider value={this.state.theme}>
                     <Toolbar changeTheme={this.toggleTheme} />
+                    <BtnUseCtx/>
                 </ThemeContext.Provider>
-
+                <BtnUseCtx/>
             </div>
         );
     }

@@ -5,6 +5,7 @@ import {useState} from 'react';
 const HooksTest = () => {
     let [num, setNum] = useState(0);
 
+    console.log(setNum);
     return (
         <div>
             <button onClick={() => {
