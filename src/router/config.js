@@ -17,6 +17,7 @@ import List1 from '../components/test-list/List1';
 import List2 from '../components/test-list/List2';
 import TestMemo from '../components/test-memo';
 import AppCycleDP from '../components/app-cycle-dp';
+import ControlValue from '../components/ControlValue';
 
 let config = [
     {
@@ -105,6 +106,10 @@ let config = [
         path: '/app/cycleDp',
         name: '组合测试',
         component: AppCycleDP
+    }, {
+        path: '/controlValue',
+        name: 'controlValue',
+        component: ControlValue
     }
 ];
 
