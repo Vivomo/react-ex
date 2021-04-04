@@ -5,7 +5,7 @@ import './App.scss';
 import Menu from './components/menu/Menu';
 import routerConfig from './router/config';
 import RenderRouter from './router/RenderRouter';
-import 'antd/dist/antd.css'
+import 'antd/dist/antd.css';
 
 
 let App = () => {

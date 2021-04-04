@@ -5,7 +5,7 @@ let initData = Array(90).fill(0).map((item, index) => ({
     day: index + 1
 }));
 
-let createProduct = (cost, dayIncome, index) => (Object.freeze({cost, dayIncome, index}));
+let createProduct = (cost, dayIncome, index) => Object.freeze({cost, dayIncome, index});
 let limit = {
     100000: 1,
     10000: 1,
@@ -34,7 +34,7 @@ export default () => {
     let removeProduct = (product) => {
         cmbProducts.splice(cmbProducts.indexOf(product), 1);
         setCmbProducts([...cmbProducts]);
-    }
+    };
 
     let score = 10000;
 
@@ -57,14 +57,13 @@ export default () => {
             }
         },
         {
-            title: (
+            title: 
                 <Space>
                     产品
                     <Checkbox onChange={({target}) => {
-                        setOnlyNewProduct(target.checked)
+                        setOnlyNewProduct(target.checked);
                     }}>只显示新添加</Checkbox>
-                </Space>
-            ),
+                </Space>,            
             key: 'products',
             width: 600,
             render: (products, record) => {
@@ -72,15 +71,12 @@ export default () => {
                     <>
                         {
                             cmbProducts
-                                .filter(product =>
-                                    product.createTime <= record.day && (onlyNewProduct ? product.createTime === record.day : true))
+                                .filter(product => product.createTime <= record.day && (onlyNewProduct ? product.createTime === record.day : true))
                                 .sort((a, b) => b.cost - a.cost)
-                                .map((product) => (
-                                    <Tag key={product.id} color={product.createTime === record.day ? 'green' : ''}
-                                         closable onClose={() => {
-                                        removeProduct(product)
-                                    }}>{product.cost}</Tag>
-                                ))
+                                .map((product) => <Tag key={product.id} color={product.createTime === record.day ? 'green' : ''}
+                                    closable onClose={() => {
+                                        removeProduct(product);
+                                    }}>{product.cost}</Tag>)
                         }
                     </>
                 );
@@ -90,33 +86,27 @@ export default () => {
             title: '日收益',
             render(text, record) {
                 return cmbProducts.filter(product => product.createTime <= record.day)
-                    .reduce((prev, cur) => (prev + cur.dayIncome), 0);
+                    .reduce((prev, cur) => prev + cur.dayIncome, 0);
             }
         },
         {
             title: '可添加',
             key: 'opt',
-            render: (text, record) => (
-                <Space>
-                    {
-                        products.filter(product => {
-                            return product.cost <= score &&
-                                cmbProducts.filter(elemProduct => product.cost === elemProduct.cost).length < limit[product.cost]
-                        }).map((product, index) => (
-                            <Button
-                                key={index}
-                                onClick={() =>
-                                    setCmbProducts(
-                                        cmbProducts.filter(product => product.createTime <= record.day)
-                                            .concat({...product, createTime: record.day, id: Math.random()})
-                                    )
-                                }
-                            >{product.cost}
-                            </Button>
-                        ))
-                    }
-                </Space>
-            )
+            render: (text, record) => <Space>
+                {
+                    products.filter(product => {
+                        return product.cost <= score &&
+                                cmbProducts.filter(elemProduct => product.cost === elemProduct.cost).length < limit[product.cost];
+                    }).map((product, index) => <Button
+                        key={index}
+                        onClick={() => setCmbProducts(cmbProducts.filter(product => product.createTime <= record.day)
+                            .concat({...product, createTime: record.day, id: Math.random()}))
+                        }
+                    >{product.cost}
+                    </Button>)
+                }
+            </Space>
+            
         }
     ];
 
@@ -128,5 +118,5 @@ export default () => {
             columns={columns}
             pagination={false}
         />
-    )
+    );
 };
