@@ -24,7 +24,9 @@ class Counter extends Component {
                         }
                     });
                 }}>store dispatch</button>
-                <button onClick={() => this.setState({})}>setState</button>
+                <button onClick={() => {
+                    this.setState({});
+                }}>setState</button>
             </div>
         );
     }
