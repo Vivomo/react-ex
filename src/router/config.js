@@ -18,6 +18,7 @@ import List2 from '../components/test-list/List2';
 import TestMemo from '../components/test-memo';
 import AppCycleDP from '../components/app-cycle-dp';
 import ControlValue from '../components/ControlValue';
+import Update from '../components/update';
 
 let config = [
     {
@@ -110,6 +111,10 @@ let config = [
         path: '/controlValue',
         name: 'controlValue',
         component: ControlValue
+    }, {
+        path: '/update',
+        name: 'update',
+        component: Update
     }
 ];
 
