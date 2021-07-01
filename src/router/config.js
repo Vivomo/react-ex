@@ -19,6 +19,7 @@ import TestMemo from '../components/test-memo';
 import AppCycleDP from '../components/app-cycle-dp';
 import ControlValue from '../components/ControlValue';
 import Update from '../components/update';
+import DebounceRule from '../components/debounce-rule';
 
 let config = [
     {
@@ -115,6 +116,10 @@ let config = [
         path: '/update',
         name: 'update',
         component: Update
+    }, {
+        path: '/debounceRule',
+        name: 'debounceRule',
+        component: DebounceRule
     }
 ];
 
